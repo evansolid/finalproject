@@ -37,6 +37,37 @@
   <p>
     our works cited for this project.
   </p>
+  <br> <br>
+    <h2>Quiz!</h2>
+    <h3>Test your knoledge and comprehension!</h3>
+      <form id="quizForm">
+        <div class="question">1. What benefits does AI provide to healthcare workers?</div>
+        <div class="options">
+            <input type="radio" name="q1" value="wrong"> 
+            It uses up lots of water and natural resources so we don't have to worry about keeping them clean<br>
+            <input type="radio" name="q1" value="correct"> 
+            It allows for more acurate and personalized diagnoses and treatments to be performed<br>
+            <input type="radio" name="q1" value="wrong"> Home 
+            It provides jobs for software developers and helps technology companies to make more money
+        </div>
+
+        <button type="button" onclick="checkAnswers()">Submit Quiz</button>
+    </form>
+
+    <div id="scoreDisplay" class="result"></div>
+
+    <script>
+        function checkAnswers() {
+            let score = 0;
+            const q1 = document.querySelector('input[name="q1"]:checked');
+            
+            if (q1 && q1.value === "correct") {
+                score++;
+            }
+            
+            document.getElementById('scoreDisplay').innerText = "Your score: " + score + "/1";
+        }
+    </script>
 
 </section>
 
