@@ -80,13 +80,16 @@ label #cancel{
 #check:checked ~ label #cancel{
   left: 195px;
 }
-#check:checked ~ section{
-  margin-left: 250px;
-}
+
 section{
-  background: url(bg.jpeg) no-repeat;
+  background: rgb(255, 191, 184);
   background-position: center;
   background-size: cover;
-  height: 100vh;
+  min-height: 100vh;
+
+  padding: 100px 60px 60px 300px;
+
+  color: black;
+
   transition: all .5s;
 }
