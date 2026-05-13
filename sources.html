@@ -26,7 +26,6 @@
      <li><a href="privacy.html"><i class="fas fa-unlock"></i>Privacy</a></li>
      <li><a href="environment.html"><i class="fas fa-tree"></i>Environment</a></li>
      <li><a href="action.html"><i class="fas fa-gavel"></i>Options for Action</a></li>
-     <li><a href="more.html"><i class="far fa-question-circle"></i>Learn More</a></li>
      <li><a href="sources.html"><i class="fas fa-book"></i>Sources</a></li>
     </ul>
 </div>
@@ -39,16 +38,58 @@
   </p>
   <br> <br>
     <h2>Quiz!</h2>
-    <h3>Test your knoledge and comprehension!</h3>
+    <h3>Test your knoledge and comprehension!</h3><br>
       <form id="quizForm">
-        <div class="question">1. What benefits does AI provide to healthcare workers?</div>
+        <div class="question"><b>1. What benefits does AI provide to healthcare workers?</b></div>
         <div class="options">
             <input type="radio" name="q1" value="wrong"> 
             It uses up lots of water and natural resources so we don't have to worry about keeping them clean<br>
             <input type="radio" name="q1" value="correct"> 
             It allows for more acurate and personalized diagnoses and treatments to be performed<br>
-            <input type="radio" name="q1" value="wrong"> Home 
+            <input type="radio" name="q1" value="wrong">  
             It provides jobs for software developers and helps technology companies to make more money
+        </div>
+        <br>
+        <div class="question"><b>2. Which act is responsible for keeping Protected Health Information private?</b></div>
+        <div class="options">
+            <input type="radio" name="q2" value="wrong"> 
+            FERPA<br>
+            <input type="radio" name="q2" value="wrong"> 
+            COPPA<br>
+            <input type="radio" name="q2" value="correct">  
+            HIPAA
+        </div><br>
+
+        <div class="question"><b>3. How many large healthcare data breaches have been reported between October 2009 and January 2026?</b></div>
+        <div class="options">
+            <input type="radio" name="q3" value="wrong"> 
+            70<br>
+            <input type="radio" name="q3" value="wrong"> 
+            700<br>
+            <input type="radio" name="q3" value="correct">  
+            7000
+        </div><br>
+
+        
+        <div class="question"><b>4. Why is Artificial Intelligence harmful to the environment?</b></div>
+        <div class="options">
+            <input type="radio" name="q4" value="correct"> 
+            AIs require massive ammounts of energy to train and run, as well as resources for computer chips and data centers<br>
+            <input type="radio" name="q4" value="wrong"> 
+            People confuse AI-generated art of trees and the outside with reality and never leave their homes, thus ignoring the beauty of nature<br>
+            <input type="radio" name="q4" value="wrong"> 
+            It is actually good for the environment, as drying up rivers will give fish new jobs in the seafood industry
+        </div><br>
+
+        
+        <div class="question"><b>5. Why are healthcare data leaks bad?</b> </div>
+        <div class="options">
+            <input type="radio" name="q5" value="wrong"> 
+            If everyone has your personal information then it isn't special anymore and you stop being cool and mysterious<br>
+            <input type="radio" name="q5" value="wrong"> 
+            Data is a character on Star Trek and if he's leaking it's a bad sign...<br>
+            <input type="radio" name="q5" value="correct">  
+            Bad actors with your data can impersonate you and use personally identifying information to make fake insurance claims or other fraudulent acts.
         </div>
 
         <button type="button" onclick="checkAnswers()">Submit Quiz</button>
@@ -60,12 +101,32 @@
         function checkAnswers() {
             let score = 0;
             const q1 = document.querySelector('input[name="q1"]:checked');
+            const q2 = document.querySelector('input[name="q2"]:checked');
+            const q3 = document.querySelector('input[name="q3"]:checked');
+            const q4 = document.querySelector('input[name="q4"]:checked');
+            const q5 = document.querySelector('input[name="q5"]:checked');
             
             if (q1 && q1.value === "correct") {
                 score++;
             }
+                        
+            if (q2 && q2.value === "correct") {
+                score++;
+            }
+                        
+            if (q3 && q3.value === "correct") {
+                score++;
+            }
+                        
+            if (q4 && q4.value === "correct") {
+                score++;
+            }
+                        
+            if (q5 && q5.value === "correct") {
+                score++;
+            }
             
-            document.getElementById('scoreDisplay').innerText = "Your score: " + score + "/1";
+            document.getElementById('scoreDisplay').innerText = "Your score: " + score + "/5";
         }
     </script>
 
