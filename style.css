@@ -87,9 +87,25 @@ section{
   background-size: cover;
   min-height: 100vh;
 
-  padding: 100px 60px 60px 300px;
+  padding: 100px 37vw 60px 300px;
   font-size: clamp(1rem, 0.5vw + 1rem, 3rem);
   color: black;
 
   transition: all .5s;
+}
+
+.show-on-mobile {
+  display: none;
+}
+
+@media (max-width: 1500px) {
+  .hide-on-mobile {
+    display: none;
+  }
+  .content {
+    padding-right: 5vw;
+  }
+  .show-on-mobile {
+    display: block;
+  }
 }
