@@ -97,6 +97,9 @@ section{
 .show-on-mobile {
   display: none;
 }
+.hide-on-mobile {
+  float: left;
+}
 
 @media (max-width: 1500px) {
   .hide-on-mobile {
